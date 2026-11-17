@@ -29,7 +29,7 @@
     $result = mysqli_query($dbconn, $query);
 
     // Step 4: Check that the query worked
-    if ($result) {
+        if ($result && mysqli_num_rows($result) > 0) {
       // Build the HTML table: header row first, then one row per car
       echo "<table>\n";
       echo "<tr><th>Car ID</th><th>Make</th><th>Model</th><th>Price</th><th>Year</th></tr>\n";
